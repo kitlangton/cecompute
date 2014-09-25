@@ -1,5 +1,16 @@
-<div class="small-12">
+<div class="row service-show">
   <% @order.services.each do |service| %>
-    <h1> <%= service.name %> </h1>
-  <% end %>
+    <div class="small-6 columns">
+    <div class="text-right">
+      <%= service.name %>
+    </div>
+  </div>
+    <div class="small-6 columns">
+    <div class="text-left">
+      <%= service.price %>
+    </div>
+  </div>
+<% end %>
+
+</table>
 </div>

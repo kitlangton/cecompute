@@ -11,8 +11,9 @@
 </div>
 <div class="computer-container">
 
-  <div id="services" class="row">
   <%= form_for @order do |f|  %>
+
+  <div id="services" class="row">
     <%= render @services.sort_by(&:price), f: f  %>
   </div>
 

@@ -18,6 +18,7 @@ window.hi = ->
       $("#total").removeClass 'new-price-plus', 300
       $(this).addClass 'new-price-plus'
       $(this).removeClass 'new-price-plus', 300
+      $(this).find('.select-val').val "selected"
 
       return
     if $(this).hasClass "active"
@@ -31,7 +32,10 @@ window.hi = ->
       $("#total").removeClass 'new-price-minus', 300
       $(this).addClass 'new-price-minus'
       $(this).removeClass 'new-price-minus', 300
+      $(this).find('.select-val').val "1"
+
 $ ->
   window.hi()
+  $('.select-val').val "1"
 
 

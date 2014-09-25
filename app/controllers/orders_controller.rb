@@ -5,8 +5,8 @@ class OrdersController < ApplicationController
     @order = Order.new
     Rails.logger.info("PARAMS: #{params.inspect}")
     if @order.save
-      params[:service_ids].keys.each do |id|
-        @order.order_services.create!(service_id: id)
+      params[:service_ids].each do |k, v|
+        @order.order_services.create!(service_id: k) if v == "selected"
       end
       redirect_to @order
     else
@@ -20,7 +20,4 @@ class OrdersController < ApplicationController
 
   private
 
-  def order_params
-    params.require(:service_ids).permit(:service_ids)
-  end
 end
