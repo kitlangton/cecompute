@@ -1,6 +1,6 @@
 
 format2 = (n, currency) ->
-  currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")
+  currency + "" + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")
 
 window.hi = ->
 
