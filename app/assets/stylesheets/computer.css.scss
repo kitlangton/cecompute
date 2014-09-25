@@ -1,0 +1,44 @@
+.service {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.computer-container {
+  font-size: 1.2em;
+}
+
+.arrow {
+  visibility: hidden;
+}
+
+.active {
+  color: green;
+  // &:hover {
+    //   color: darkgreen;
+  // }
+}
+
+.dormant {
+  color: grey;
+  // &:hover {
+    //   color: darkslategrey;
+  // }
+}
+
+.new-price-plus {
+  color: lightgreen;
+}
+
+
+.new-price-minus {
+  color: red;
+}
+
+#total-price {
+  font-weight: bold;
+}

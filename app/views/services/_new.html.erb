@@ -1,0 +1,15 @@
+<div class="row">
+
+
+    <h3 class="text-center">New Service</h3>
+
+    <%= form_for @service, remote: true, format: :js do |f| %>
+      <%= f.text_field :name, placeholder: "Service name..."%>
+
+    <%= f.text_field :price, data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: "Service price..." %>
+    <div class="text-center">
+    <%= f.submit "Save Service", class:"button tiny radius" %>
+    </div>
+  <% end %>
+
+</div>

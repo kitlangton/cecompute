@@ -1,0 +1,15 @@
+<div class="small-12">
+  <h3 class="text-center">New Service</h3>
+</div>
+
+<div class="small-12 medium-8 large-5 small-centered columns">
+
+  <%= form_for @service do |f| %>
+    <%= f.text_field :name, placeholder: "Service name..."%>
+
+    <%= f.text_field :price, data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: "Service price..." %>
+
+  <%= f.submit "Save Service", class:"button" %>
+<% end %>
+
+</div>

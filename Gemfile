@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'faker'
 gem 'foundation-rails'
+gem 'foundation_rails_helper'
+gem 'jquery-ui-rails'
+gem 'autonumeric-rails'
 
 group :development, :test do
   gem 'sqlite3'

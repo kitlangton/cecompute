@@ -13,6 +13,23 @@
 
   <body>
 
+
+    <div class="row">
+      <div class="small-12">
+        <div class="text-center">
+          <h1>coloredge <small>composer</small></h1>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="flashes small-12 medium-5 large-3 small-centered columns">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "text-center  alert-box #{key}") %>
+    <% end %>
+    </div>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

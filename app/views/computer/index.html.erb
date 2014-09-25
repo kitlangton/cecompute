@@ -1,0 +1,27 @@
+<div class="text-center small-12 medium-8 large-5 small-centered row">
+  <p>
+  Select your services and calculate your total.
+</p>
+</div>
+
+    <%= render 'layouts/icon_bar'  %>
+
+<div id="service-form" style="display:none;" class="panel small-12 medium-8 large-5 small-centered columns">
+
+</div>
+<div class="computer-container">
+
+  <div id="services" class="row">
+    <%= render @services.sort_by(&:price)  %>
+  </div>
+
+  <div class="row" id="total">
+    <div class="small-6 columns text-right">
+      <em id="totaltext">Total</em>
+    </div>
+    <div class="small-6 columns text-left">
+      <span id="totalprice" data-total="">$0.00</span>
+    </div>
+  </div>
+</div>
+
