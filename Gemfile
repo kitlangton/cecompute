@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'faker'
-gem 'foundation-rails', :git => "https://github.com/sudokill/foundation-rails"
+gem 'foundation-rails', :git => "https://github.com/sudokill/foundation-rails.git"
 gem 'foundation_rails_helper'
 gem 'jquery-ui-rails'
 gem 'autonumeric-rails'

@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/sudokill/foundation-rails
-  revision: a3ee6c016cd1d31b25592f6af685bfe59787e9f2
+  remote: https://github.com/sudokill/foundation-rails.git
+  revision: 78e97354c566b7b73ddcf0ab6bfa020aba140882
   specs:
     foundation-rails (5.4.4.0)
       railties (>= 3.1.0)
