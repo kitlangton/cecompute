@@ -19,6 +19,8 @@ window.hi = ->
       $(this).addClass 'new-price-plus'
       $(this).removeClass 'new-price-plus', 300
       $(this).find('.select-val').val "selected"
+      if current_total > 0
+        $('#totalprice').addClass "green"
 
       return
     if $(this).hasClass "active"

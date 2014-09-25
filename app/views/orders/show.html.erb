@@ -8,18 +8,19 @@
       <%= service.name %>
     </div>
   </div>
-    <div class="small-6 columns">
-    <div class="text-left">
+  <div class="small-6 columns">
+    <div class="text-left service-show-price">
       <%= number_to_currency(service.price) %>
     </div>
   </div>
 <% end %>
-<div class="small-6 columns text-right">
-  Total:
-</div>
-
-<div class="small-6 columns text-left">
-  <%= number_to_currency(@order.total)  %>
+<div class="total">
+  <div class="small-6 columns text-right total-word">
+    Total
+  </div>
+  <div class="small-6 columns text-left cost">
+    <%= number_to_currency(@order.total)  %>
+  </div>
 </div>
 </table>
 </div>
