@@ -1,8 +1,7 @@
 format2 = (n, currency) ->
   currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")
 
-$ ->
-
+window.hi = ->
   $(".service").click ->
     price = $(this).data('price')
     if $(this).hasClass "dormant"
@@ -30,5 +29,7 @@ $ ->
       $("#total").removeClass 'new-price-minus', 300
       $(this).addClass 'new-price-minus'
       $(this).removeClass 'new-price-minus', 300
+$ ->
+  window.hi()
 
 

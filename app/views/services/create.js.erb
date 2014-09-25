@@ -1,3 +1,10 @@
 $('#service-form').slideUp(350);
 $("#services").html("<%= escape_javascript(render(@services)) %>");
 $('#nav-bar').slideDown(144);
+var format2;
+$("#totalprice").text("$0.00");
+format2 = function(n, currency) {
+  return currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+};
+$("#totalprice").data('total', 0);
+window.hi();
