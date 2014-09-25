@@ -1,4 +1,7 @@
 <div class="row service-show">
+  <div class="small-12 text-center">
+    <h3 class="subheader">Order #<%= @order.id  %></h1>
+  </div>
   <% @order.services.each do |service| %>
     <div class="small-6 columns">
     <div class="text-right">
@@ -7,10 +10,16 @@
   </div>
     <div class="small-6 columns">
     <div class="text-left">
-      <%= service.price %>
+      <%= number_to_currency(service.price) %>
     </div>
   </div>
 <% end %>
+<div class="small-6 columns text-right">
+  Total:
+</div>
 
+<div class="small-6 columns text-left">
+  <%= number_to_currency(@order.total)  %>
+</div>
 </table>
 </div>
