@@ -12,7 +12,8 @@
 <div class="computer-container">
 
   <div id="services" class="row">
-    <%= render @services.sort_by(&:price)  %>
+  <%= form_for @order do |f|  %>
+    <%= render @services.sort_by(&:price), f: f  %>
   </div>
 
   <div class="row" id="total">
@@ -23,5 +24,9 @@
       <span id="totalprice" data-total="">$0.00</span>
     </div>
   </div>
+    <div class="small-12 small-centered order-button text-center">
+    <%= f.submit "Submit" %>
+    </div>
+  <% end  %>
 </div>
 

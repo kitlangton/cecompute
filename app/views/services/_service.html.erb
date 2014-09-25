@@ -1,5 +1,6 @@
 <span class="service dormant rows" data-price="<%= service.price  %>">
   <div class="small-6 text-right columns">
+    <%= hidden_field_tag "service_ids[#{service.id}]", :track, :value => nil %>
     <span class="service-name"> <%= service.name %> </span>
   </div>
   <div class="small-6 text-left columns" >

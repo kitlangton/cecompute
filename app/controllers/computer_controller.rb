@@ -3,5 +3,6 @@ class ComputerController < ApplicationController
 
   def index
     @services = Service.all
+    @order = Order.new
   end
 end

@@ -1,3 +1,4 @@
 class Order < ActiveRecord::Base
-  belongs_to :service
+  has_many :order_services
+  has_many :services, :through => :order_services
 end
