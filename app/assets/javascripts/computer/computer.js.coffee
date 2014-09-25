@@ -4,6 +4,15 @@ format2 = (n, currency) ->
 
 window.hi = ->
 
+  # $(".service").hover (->
+  #   $(this).animate "font-size", "150%", 50
+  #   $(this).click ->
+  #     $(this).css "color", ""
+  #   return
+  # ), ->
+  #   $(this).css "color", ""
+  #   return
+ 
   $(".service").click ->
     price = $(this).data('price')
     if $(this).hasClass "dormant"
