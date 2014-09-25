@@ -1,4 +1,14 @@
 .service {
+  .service-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
+  }
+  height: 50px;
+  width: 50px;
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

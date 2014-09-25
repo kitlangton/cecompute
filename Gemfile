@@ -17,6 +17,7 @@ gem 'foundation_rails_helper'
 gem 'jquery-ui-rails'
 gem 'autonumeric-rails'
 gem 'newrelic_rpm'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3'
