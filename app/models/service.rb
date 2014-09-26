@@ -6,7 +6,7 @@ class Service < ActiveRecord::Base
   has_many :order_services
   has_many :orders, :through => :order_services
 
-  before_save :titleize_name
+  before_validation :titleize_name
 
   
 
