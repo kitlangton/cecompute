@@ -1,0 +1,31 @@
+<div class="user-nav top-bar" data-topbar role="navigation">
+  <section class="top-bar-section">
+          <% if user_signed_in? %>
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="#">
+            Logged in as <strong><%= current_user.email %></strong>.
+        </a>
+        <ul class="dropdown">
+          <li>
+              <%= link_to 'Edit profile', edit_user_registration_path %> 
+          </li>
+          <li class="active">
+              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="right">
+  <li>
+      <%= link_to "Sign up", new_user_registration_path %>
+</li>
+  <li class="active">
+    <%= link_to "Login", new_user_session_path %>
+</li>
+    </ul>
+  <% end %> 
+  </section>
+</div>
+
