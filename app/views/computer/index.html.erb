@@ -4,8 +4,9 @@
 </p>
 </div>
 
+<% if current_user.try(:admin?)  %>
     <%= render 'layouts/icon_bar'  %>
-
+  <% end %>
 <div id="service-form" style="display:none;" class="panel small-12 medium-8 large-5 small-centered columns">
 
 </div>
