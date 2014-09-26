@@ -1,6 +1,7 @@
 <div class="row">
 
 
+    <%= content_tag :span, "", class: "right fa fa-remove tiny radius close-button", onclick: "closeWindow()"  %>
     <h3 class="text-center">New Service</h3>
 
     <%= form_for @service, remote: true, format: :js do |f| %>
