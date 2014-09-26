@@ -1,4 +1,5 @@
 $('#nav-bar').slideUp(144);
 $('#service-form').html("<%= j (render 'new') %>");
 $('#service-form').slideDown(350);
-document.getElementById('service_name').focus()
+document.getElementById('service_name').focus();
+$("#save-service").prop("disabled", false);

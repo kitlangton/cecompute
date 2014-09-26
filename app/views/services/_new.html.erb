@@ -8,7 +8,7 @@
 
     <%= f.text_field :price, data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: "Service price..." %>
     <div class="text-center">
-    <%= f.submit "Save Service", class:"button tiny radius" %>
+    <%= f.submit "Save Service", class:"button tiny radius", id: "save-service" %>
     </div>
   <% end %>
 

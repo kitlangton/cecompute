@@ -1,3 +1,6 @@
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://raw.github.com/rails/jquery-ujs/master/src/rails.js"></script>
+
 <div class="text-center small-12 medium-8 large-5 small-centered row">
   <p>
   Select your services and calculate your total.
@@ -26,7 +29,7 @@
     </div>
   </div>
     <div class="small-12 small-centered order-button text-center">
-    <%= f.submit "Submit" %>
+      <%= button_tag "Submit", class: "button success radius", data: { disable_with: "Saving..."} %>
     </div>
   <% end  %>
 </div>

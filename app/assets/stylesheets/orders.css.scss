@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .service-show {
   font-size: 1.2em;
 }
@@ -13,6 +15,15 @@
 .side {
   background-color: red;
   height: 100%
+}
+
+.order-service-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
 }
 
 .total {

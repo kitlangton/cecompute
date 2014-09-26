@@ -2,6 +2,7 @@
 format2 = (n, currency) ->
   currency + "" + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")
 
+
 window.hi = ->
 
   # $(".service").hover (->
@@ -11,8 +12,8 @@ window.hi = ->
   #   return
   # ), ->
   #   $(this).css "color", ""
-  #   return
- 
+  $("#sbmit").text "red"
+
   $(".service").click ->
     price = $(this).data('price')
     if $(this).hasClass "dormant"
@@ -48,5 +49,3 @@ window.hi = ->
 $ ->
   window.hi()
   $('.select-val').val "1"
-
-

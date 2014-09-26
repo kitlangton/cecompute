@@ -18,6 +18,7 @@ gem 'jquery-ui-rails'
 gem 'autonumeric-rails'
 gem 'newrelic_rpm'
 gem "font-awesome-rails"
+gem 'simple_form'
 
 group :development, :test do
   gem 'sqlite3'

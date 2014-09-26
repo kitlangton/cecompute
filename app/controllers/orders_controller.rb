@@ -3,7 +3,6 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new
-    Rails.logger.info("PARAMS: #{params.inspect}")
     if @order.save
       params[:service_ids].each do |k, v|
         @order.order_services.create!(service_id: k) if v == "selected"
