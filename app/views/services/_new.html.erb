@@ -2,7 +2,7 @@
 
 
     <%= content_tag :span, "", class: "right fa fa-remove tiny radius close-button", onclick: "closeWindow()"  %>
-    <h3 class="text-center">New Service</h3>
+    <h3 class="text-center new-service-text">New Service</h3>
 
     <%= form_for @service, remote: true, format: :js do |f| %>
       <%= f.text_field :name, placeholder: "Service name..."%>

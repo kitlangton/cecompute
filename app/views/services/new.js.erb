@@ -1,3 +1,9 @@
+var closeWindow;
+closeWindow = function() {
+  $('#nav-bar').slideDown(144);
+  return $('#service-form').slideUp(144);
+};
+
 $('#nav-bar').slideUp(144);
 $('#service-form').html("<%= j (render 'new') %>");
 $('#service-form').slideDown(350);
