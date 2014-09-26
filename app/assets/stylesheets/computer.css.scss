@@ -7,6 +7,12 @@
   }
 }
 
+.hidden {
+  display: inline-block;
+  visibility: hidden;
+  position: absolute;
+}
+
 .new-service-text {
   clear: both;
 }
@@ -24,7 +30,23 @@
   }
 }
 
+.toggle-delete {
+  position: relative;
+  margin-left: 10px;
+  top: 5px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+
+.grey {
+  color: white ;
+}
+
 .service {
+
   .service-name {
     text-overflow: ellipsis;
     overflow: hidden;

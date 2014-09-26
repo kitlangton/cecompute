@@ -2,6 +2,7 @@
   <div class="small-6 text-right columns">
     <%= hidden_field_tag "service_ids[#{service.id}]", :track, class: "select-val", :value => "1" %>
     <span class="service-name"> <%= service.name %> </span>
+    
   </div>
   <div class="small-6 text-left columns" >
     <span class="serviceprice"><%= number_to_currency(service.price)  %></span>

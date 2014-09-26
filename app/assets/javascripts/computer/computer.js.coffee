@@ -2,8 +2,6 @@
 format2 = (n, currency) ->
   currency + "" + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")
 
-
-
 window.hi = ->
 
   # $(".service").hover (->
@@ -14,7 +12,7 @@ window.hi = ->
   # ), ->
   #   $(this).css "color", ""
   #   return
- 
+
   $(".service").click ->
     price = $(this).data('price')
     if $(this).hasClass "dormant"
