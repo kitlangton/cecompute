@@ -27,10 +27,17 @@
     </ul>
   <% end %> 
 <% if current_user.try(:admin?) %>
-    <ul class="title-area right">
-      <li class="name">
-        <h1><a href="#">ADMIN MODE</a></h1>
-        </li>
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="#">
+          <a href="#">ADMIN MODE</a>
+        </a>
+        <ul class="dropdown">
+          <li>
+            <%# <%= link_to "Create User", new_user_path  %>
+          </li>
+        </ul>
+      </li>
     </ul>
 <% end %>
   </section>
