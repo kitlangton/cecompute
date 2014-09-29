@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   respond_to :html, :js
 
   def create
-    @order = Order.new
+    @order = Order.new(user_id: current_user.id)
     Rails.logger.info("PARAMS: #{params.inspect}")
     if @order.save
       params[:service_ids].each do |k, v|

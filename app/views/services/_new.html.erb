@@ -4,10 +4,11 @@
     <%= content_tag :span, "", class: "right fa fa-remove tiny radius close-button", onclick: "closeWindow()"  %>
     <h3 class="text-center new-service-text">New Service</h3>
 
-    <%= form_for @service, remote: true, format: :js do |f| %>
+    <%= form_for @service, remote: true do |f| %>
       <%= f.text_field :name, placeholder: "Service name..."%>
 
     <%= f.text_field :price, data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: "Service price..." %>
+
     <div class="text-center">
     <%= f.submit "Save Service", class:"button tiny radius", id: "save-service" %>
     </div>

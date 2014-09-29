@@ -1,0 +1,17 @@
+<h3 class="subheader small-12 medium-8 large-5 small-centered columns text-center">My Orders</h3>
+
+<% @orders.each do |order| %>
+  <hr />
+<div class="user small-12 medium-8 large-5 small-centered columns text-center">
+  <div class="">
+    <strong><%= link_to "##{order.id}", order_path(order) %></strong>
+  </div>
+  <div class="">
+    <% order.services.each do |service| %>
+      <div class="order-list-service">
+        <%= service.name  %>
+      </div>
+  <% end %>
+  </div>
+</div>
+<% end %>

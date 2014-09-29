@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140926220153) do
+ActiveRecord::Schema.define(version: 20140929211446) do
+
+  create_table "active_admin_comments", force: true do |t|
+    t.string   "namespace"
+    t.text     "body"
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
   create_table "order_services", force: true do |t|
     t.integer  "order_id"
@@ -27,9 +42,11 @@ ActiveRecord::Schema.define(version: 20140926220153) do
     t.integer  "service_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "orders", ["service_id"], name: "index_orders_on_service_id"
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
   create_table "services", force: true do |t|
     t.string   "name"

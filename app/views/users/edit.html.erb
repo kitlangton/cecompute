@@ -1,0 +1,10 @@
+<h2 class="small-12 medium-8 large-5 small-centered columns text-center">Create User</h2>
+
+<%= form_for @user do |f| %>
+
+  <div class="small-12 medium-8 large-5 small-centered columns">
+  <%= f.email_field :email, autofocus: true %></div>
+
+<div class="small-12 medium-8 large-5 small-centered columns text-center">
+<%= f.submit "Update User" %></div>
+<% end %>
