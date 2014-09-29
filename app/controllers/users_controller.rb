@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
+    if @user.update(user_update_params)
       redirect_to users_path
       flash.now[:success] = "Edited User!"
     else
@@ -49,6 +49,10 @@ class UsersController < ApplicationController
   end
 
   def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def user_update_params
     params.require(:user).permit(:email)
   end
 end
