@@ -19,6 +19,11 @@ gem 'jquery-ui-rails'
 gem 'autonumeric-rails'
 gem 'newrelic_rpm'
 gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'rmagick', :require => 'RMagick'
+gem 'masonry-rails'
+gem 'spinjs-rails'
+
 
 group :development, :test do
   gem 'sqlite3'

@@ -1,0 +1,11 @@
+<h1>Product Page</h1>
+
+<h3><%= @product.name %></h3>
+
+<div class="base-cost">
+  <%= number_to_currency(@product.base_cost)  %>
+</div>
+
+<div class="duplicate-cost">
+  <%= number_to_currency(@product.duplicate_cost)  %>
+</div>

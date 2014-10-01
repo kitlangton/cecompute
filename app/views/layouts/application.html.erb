@@ -15,21 +15,27 @@
 
     <%= render 'layouts/topbar' %>
 
-    <div class="row">
-      <div class="small-12">
-        <div class="text-center">
-          <%= link_to root_path do  %>
-            <h1 id="title-link">coloredge <small>composer</small></h1>
-        <% end  %>
-        </div>
-      </div>
-    </div>
+    <!-- <div class="row"> -->
+    <!--   <div class="small&#45;12"> -->
+    <!--     <div class="text&#45;center"> -->
+    <!--       <%= link_to root_path do  %> -->
+    <!--         <%= image_tag 'Coloredge_composer_logo.png', id: "site&#45;logo"  %> -->
+    <!--     <% end  %> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
 
 
     <div class="flashes small-12 medium-5 large-3 small-centered columns">
       <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "text-center  alert-box #{key}") %>
+        <div data-alert class="alert-box <%= key  %> radius">
+          <%= value  %>
+        <a href="#" class="close">&times;</a>
+        </div>
     <% end %>
+
+    </div>
+
     </div>
     <div class="row">
       <%= yield %>

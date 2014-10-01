@@ -1,3 +1,65 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.page-header {
+}
+
+#container {
+  margin: 0 auto;
+  // display: none;
+}
+
+.edit-image {
+  img {
+    height: 200px;
+    width: auto;
+  }
+}
+
+.ajax-fun {
+  transition: all .5s;
+}
+
+#form-container {
+  display: none;
+}
+
+.product-name a {
+  color: black;
+}
+
+.top-bar-logo {
+  // display: none;
+  max-height: 25px;
+  margin-left: 1px;
+  margin-bottom: 1px;
+}
+
+#site-logo {
+  margin-top: 15px;
+  max-height: 100px;
+  width: auto;
+}
+
+.product-container {
+  overflow: auto;
+  padding: 15px;
+  text-align: center;
+  // height: 300px;
+  width: 200px;
+  background: rgb(233,233,233);
+  border: 1px solid lightgrey;
+  margin-bottom: 15px;
+
+  .product-image img {
+    height: 150px;
+    width: auto;
+  }
+}
+
+.isotope {
+}
+
+.item {
+}
+
