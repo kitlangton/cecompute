@@ -207,7 +207,6 @@ PLATFORMS
 
 DEPENDENCIES
   autonumeric-rails
-  bcrypt (~> 3.1.7)
   capybara
   coffee-rails (~> 4.0.0)
   compass-rails

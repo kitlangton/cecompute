@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140929211446) do
+ActiveRecord::Schema.define(version: 20141001162117) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140929211446) do
 
   add_index "orders", ["service_id"], name: "index_orders_on_service_id"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.decimal  "base_cost",      precision: 10, scale: 2
+    t.decimal  "duplicate_cost", precision: 10, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "services", force: true do |t|
     t.string   "name"

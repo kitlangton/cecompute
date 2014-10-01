@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :services
   resources :orders
-  root 'computer#index'
+  resources :products
+
+  root 'products#index'
 
   scope "/admin" do
     resources :users
