@@ -6,14 +6,17 @@
 <% @products.each do |product| %>
   <div class="product-container item" >
 
+    <div class="product-link">
+      
+      <%= link_to product do  %>
     <div  class="product-image">
       <%= image_tag product.image_url(:thumb), id:"stop-2"  %>
     </div>
 
     <div class="product-name">
-      <%= link_to product do  %>
       <strong  id="stop-3"><%= product.name  %></strong>
     <% end %>
+    </div>
     </div>
 
     <div class="prices">
@@ -24,7 +27,12 @@
 
     <% if current_user.try(:admin)  %>
     <div class="admin-opts">
+      <li>
       <%= link_to "Edit", edit_product_path(product)  %>
+</li>
+      <li>
+      <%= link_to "Delete", product_path(product), confirm: "Are you sure?", method: :delete  %>
+</li>
     </div>
   <% end  %>
 

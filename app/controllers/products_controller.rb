@@ -9,6 +9,13 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
+
+  def destroy
+    redirect_to products_path
+    @product = Product.find(params[:id])
+    @product.destroy
+  end
+  
   def create
     @product = Product.new(product_params)
     if @product.save

@@ -9,9 +9,9 @@ $(document).ready ->
   $(".top-bar-logo").fadeIn()
   $("#joy-start").click ->
     $(document).foundation 'joyride', 'start'
-  $(".item").hover (->
-    $(this).find(".product-name a").animate
-      color: "rgb(247,143,30)", 200
+  $(".product-link").hover (->
+    $(this).closest(".item").find(".product-name a").animate
+      color: "rgb(247,143,30)", 100
   ), ->
-    $(this).find(".product-name a").animate
-      color: "black", 200
+    $(this).closest(".item").find(".product-name a").animate
+      color: "black", 100

@@ -31,8 +31,7 @@
 .top-bar-logo {
   // display: none;
   max-height: 25px;
-  margin-left: 1px;
-  margin-bottom: 1px;
+  margin-bottom: 4px;
 }
 
 #site-logo {
@@ -52,6 +51,9 @@
   margin-bottom: 15px;
 
   .product-image img {
+    &:hover {
+
+    }
     height: 150px;
     width: auto;
   }
