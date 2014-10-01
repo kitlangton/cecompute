@@ -23,6 +23,7 @@ gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
 gem 'masonry-rails'
 gem 'spinjs-rails'
+gem "fog"
 
 
 group :development, :test do
