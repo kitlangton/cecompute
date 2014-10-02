@@ -4,6 +4,7 @@ format2 = (n, currency) ->
 
 window.hi = ->
   @last_quantity = 0
+  $("#quantity").focus()
   $("#quantity").bind "change keyup", ->
     quantity = +$(this).val() or 1
     total_cost = +$(".total-cost").data "total"

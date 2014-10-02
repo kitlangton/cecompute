@@ -21,6 +21,3 @@ $ ->
     $("#upload-button").click()
   $("#upload-button:file").change ->
     $(".image-upload-replace").text $(this).val().split('\\').pop()
-
-
-
