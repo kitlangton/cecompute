@@ -5,6 +5,10 @@ $(document).ready ->
       isFitWidth: true
       columnWidth: 200
       gutter: 20
+    getSortData: 
+      name: '.product-name'
+      price: '.cost parseInt'
+
   $container.fadeIn()
   $container.isotope "layout", "start"
   $(".top-bar-logo").fadeIn()
@@ -18,7 +22,14 @@ $(document).ready ->
       color: "black", 200
 
 $ ->
+  $('#sort-by-price').click ->
+    $("#container").isotope({ sortBy : 'price'})
+  $('#sort-by-name').click ->
+    $("#container").isotope({ sortBy : 'name'})
+
+$ ->
   $(".image-upload-replace").click ->
     $("#upload-button").click()
   $("#upload-button:file").change ->
     $(".image-upload-replace").text $(this).val().split('\\').pop()
+

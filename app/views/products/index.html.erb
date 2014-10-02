@@ -4,42 +4,52 @@
 
 <h1 class="page-header text-center small-12 medium-8 large-5 small-centered row"><span id="stop-1">Product Index</span></h1>
 
+<hr />
+  <div class="columns small-12 medium-8 large-5 small-centered text-center sort-controls">
+    <ul class="button-group even-2 radius round">
+      <li><a  class="button" id="sort-by-name">Sort by Name</a></li>
+      <li><a  class="button" id="sort-by-price">Sort by Price</a></li>
+    </ul>
+  </div>
 
 <div class="products-container" id="container">
-  
-<% @products.each do |product| %>
-  <div class="product-container item" >
+
+  <% @products.each do |product| %>
+    <div class="product-container item" >
 
     <div class="product-link">
-      
-      <%= link_to product do  %>
-    <div  class="product-image th">
-      <%= image_tag product.image_url(:thumb), id:"stop-2"  %>
-    </div>
 
-    <div class="product-name">
-      <strong  id="stop-3"><%= product.name  %></strong>
-    <% end %>
-    </div>
+      <%= link_to product do  %>
+        <div  class="product-image th">
+        <%= image_tag product.image_url(:thumb), id:"stop-2"  %>
+      </div>
+
+      <div class="product-name">
+        <strong  id="stop-3"><%= product.name  %></strong>
+      <% end %>
+      </div>
     </div>
 
     <div class="prices">
-    <div class="base-cost">
-      <span class="label show-label base-cost-label" id="stop-4">Orig. Cost</span><span><%= number_to_currency(product.base_cost) %></span>
-    </div>
-    <div class="duplicate-cost">
-      <span class="label show-label duplicate-cost-label yellow" id="stop-5">Dupe Cost</span><span><%= number_to_currency(product.duplicate_cost) %></span>
-    </div>
+      <div class="cost hidden">
+        <%= product.base_cost  %>
+      </div>
+      <div class="base-cost">
+        <span class="label show-label base-cost-label" id="stop-4">Orig. Cost</span><span><%= number_to_currency(product.base_cost) %></span>
+      </div>
+      <div class="duplicate-cost">
+        <span class="label show-label duplicate-cost-label yellow" id="stop-5">Dupe Cost</span><span><%= number_to_currency(product.duplicate_cost) %></span>
+      </div>
     </div>
 
     <% if current_user.try(:admin)  %>
-    <div class="admin-opts">
+      <div class="admin-opts">
       <li>
-      <%= link_to "Edit", edit_product_path(product)  %>
-</li>
+        <%= link_to "Edit", edit_product_path(product)  %>
+      </li>
       <li>
         <%= link_to "Delete", product_path(product), method: :delete, data: { confirm: "Are you sure?" }%>
-</li>
+      </li>
     </div>
   <% end  %>
 
@@ -49,26 +59,26 @@
 </div>
 
 <div id="JoyrideDiv">
-  
-<ol class="joyride-list" data-joyride>
-  <li data-id="stop-1" data-text="Next" data-options="tip_location: top; prev_button: false">
-    <p><h4>Hello!</h4> Welcome to the <strong>Coloredge Composer</strong> Product Index.</p>
-  </li>
-  <li data-id="stop-2" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left">
-    <p> <h4>Product Image</h4> The Product index shows an image of each product.</p>
-  </li>
-  <li data-id="stop-3" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: right;tipAdjustmentY:-22px;tipAdjustmentX:14px">
-    <p> <h4>Product Name</h4> Here is the Product's name.</p>
-  </li>
-  <li data-id="stop-4" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left;tipAdjustmentY:-22px;tipAdjustmentX:-5px">
-    <p> <h4>Original Cost</h4> This is the cost for the first Comp.</p>
-  </li>
-  <li data-id="stop-5" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left;tipAdjustmentY:-22px;tipAdjustmentX:-5px">
-    <p> <h4>Duplicate Cost</h4> And here is the cost additional Comps.</p>
-  </li>
-  <li data-button="End" data-prev-text="Prev">
-    <p><h4>Estimation</h4>Click into a Product's image to estimate its prices.</p>
-  </li>
-</ol>
+
+  <ol class="joyride-list" data-joyride>
+    <li data-id="stop-1" data-text="Next" data-options="tip_location: top; prev_button: false">
+      <p><h4>Hello!</h4> Welcome to the <strong>Coloredge Composer</strong> Product Index.</p>
+    </li>
+    <li data-id="stop-2" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left">
+      <p> <h4>Product Image</h4> The Product index shows an image of each product.</p>
+    </li>
+    <li data-id="stop-3" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: right;tipAdjustmentY:-22px;tipAdjustmentX:14px">
+      <p> <h4>Product Name</h4> Here is the Product's name.</p>
+    </li>
+    <li data-id="stop-4" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left;tipAdjustmentY:-22px;tipAdjustmentX:-5px">
+      <p> <h4>Original Cost</h4> This is the cost for the first Comp.</p>
+    </li>
+    <li data-id="stop-5" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left;tipAdjustmentY:-22px;tipAdjustmentX:-5px">
+      <p> <h4>Duplicate Cost</h4> And here is the cost additional Comps.</p>
+    </li>
+    <li data-button="End" data-prev-text="Prev">
+      <p><h4>Estimation</h4>Click into a Product's image to estimate its prices.</p>
+    </li>
+  </ol>
 
 </div>
