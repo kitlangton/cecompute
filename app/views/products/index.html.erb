@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  Products
+<% end %>
+
 <h1 class="page-header text-center small-12 medium-8 large-5 small-centered row"><span id="stop-1">Product Index</span></h1>
 
 
@@ -34,7 +38,7 @@
       <%= link_to "Edit", edit_product_path(product)  %>
 </li>
       <li>
-      <%= link_to "Delete", product_path(product), confirm: "Are you sure?", method: :delete  %>
+        <%= link_to "Delete", product_path(product), method: :delete, data: { confirm: "Are you sure?" }%>
 </li>
     </div>
   <% end  %>
