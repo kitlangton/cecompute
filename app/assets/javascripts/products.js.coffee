@@ -6,6 +6,7 @@ $(document).ready ->
       columnWidth: 200
       gutter: 20
   $container.fadeIn()
+  $container.isotope "layout", "start"
   $(".top-bar-logo").fadeIn()
   $("#joy-start").click ->
     $(document).foundation 'joyride', 'start'
