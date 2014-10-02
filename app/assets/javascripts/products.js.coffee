@@ -11,7 +11,16 @@ $(document).ready ->
     $(document).foundation 'joyride', 'start'
   $(".product-link").hover (->
     $(this).closest(".item").find(".product-name a").animate
-      color: "rgb(247,143,30)", 100
+      color: "rgb(247,143,30)", 200
   ), ->
     $(this).closest(".item").find(".product-name a").animate
-      color: "black", 100
+      color: "black", 200
+
+$ ->
+  $(".image-upload-replace").click ->
+    $("#upload-button").click()
+  $("#upload-button:file").change ->
+    $(".image-upload-replace").text $(this).val().split('\\').pop()
+
+
+

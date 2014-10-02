@@ -1,11 +1,38 @@
-<h1>Product Page</h1>
+<h1 class="small-12 small-centered text-center edit-image">Product Page</h1>
 
-<h3><%= @product.name %></h3>
-
-<div class="base-cost">
-  <%= number_to_currency(@product.base_cost)  %>
+<div class="small-12 small-centered text-center edit-image">
+  <%= image_tag @product.image_url(:thumb), class: "th"%>
 </div>
 
-<div class="duplicate-cost">
-  <%= number_to_currency(@product.duplicate_cost)  %>
+
+<div class="small-12 medium-8 large-6 small-centered columns text-center edit-image">
+
+  <h3><%= @product.name %></h3>
+
+  <div class="show-body-text">
+
+    <div class="base-cost" data-base-cost="<%= @product.base_cost  %>">
+      <span class="label show-label base-cost-label" id="stop-4" >Orig. Cost</span><span><%= number_to_currency(@product.base_cost) %></span>
+    </div>
+
+    <div class="duplicate-cost inactive" data-dupe-cost="<%= @product.duplicate_cost  %>">
+      <span class="label show-label inactive-label" id="stop-5" >Dupe Cost</span><span><%= number_to_currency(@product.duplicate_cost) %></span>
+
+      <span class="multiplier nopacity">
+        &nbspx <span id="dupe-quantity"></span> = <span id="dupe-total"></span>
+      </span>
+    </div>
+
+    <hr />
+    <div class="total">
+      <span class="total-cost" data-total="<%= @product.base_cost  %>"><%= number_to_currency(@product.base_cost) %></span>
+    </div>
+  </div>
+
+  <%= label_tag "Quantity"  %>
+<%= number_field_tag 'quantity', "Quantity", in: 1...10000000000, value: 1     %>
+
+
+
+
 </div>

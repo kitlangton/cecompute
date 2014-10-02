@@ -28,16 +28,57 @@
   color: black;
 }
 
+.base-cost-label {
+  margin-right: 5px;
+}
+
+.edit-image {
+  margin-bottom: 15px;
+}
+
 .top-bar-logo {
   // display: none;
   max-height: 25px;
   margin-bottom: 4px;
 }
 
+.image-upload-replace {
+  display: block;
+}
+
+#upload-button {
+  display: none;
+}
+
 #site-logo {
   margin-top: 15px;
   max-height: 100px;
   width: auto;
+}
+
+.duplicate-cost-label {
+  background: lightcoral;
+  margin-right: 5px;
+}
+
+.duplicate-cost {
+  position: relative;
+
+  .multiplier {
+    font-size: .8em;
+    font-style: italic;
+    color: grey;
+    position: absolute;
+    right: -10;
+    top: 3px;
+  }
+}
+
+.show-label {
+  width: 70px;
+}
+.nopacity {
+  opacity: 0;
 }
 
 .product-container {

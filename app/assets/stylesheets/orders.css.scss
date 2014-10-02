@@ -12,12 +12,41 @@
 
 .admin-opts {
   list-style: none;
+  margin-top: 10px;
+}
+
+.show-body-text {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.show-label {
+  position: relative;
+  top: -1px;
 }
 
 .side {
   background-color: red;
   height: 100%
 }
+
+#quantity {
+  font-size: 1.4em;
+  height: 50px;
+  margin: 0 auto;
+  width: 100px;
+  text-align: center;
+}
+
+.inactive {
+  color: grey;
+}
+
+.inactive-label{
+  background: rgb(190,190,190);
+  margin-right: 5px;
+}
+
 
 .total {
   font-weight: bold;

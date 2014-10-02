@@ -1,4 +1,4 @@
-<h1 class="page-header text-center small-12 medium-8 large-5 small-centered row"><span id="stop-1">Products</span></h1>
+<h1 class="page-header text-center small-12 medium-8 large-5 small-centered row"><span id="stop-1">Product Index</span></h1>
 
 
 <div class="products-container" id="container">
@@ -9,7 +9,7 @@
     <div class="product-link">
       
       <%= link_to product do  %>
-    <div  class="product-image">
+    <div  class="product-image th">
       <%= image_tag product.image_url(:thumb), id:"stop-2"  %>
     </div>
 
@@ -21,7 +21,10 @@
 
     <div class="prices">
     <div class="base-cost">
-      <span id="stop-4"><%= number_to_currency(product.base_cost) %></span>
+      <span class="label base-cost-label" id="stop-4">Orig. Cost</span><span><%= number_to_currency(product.base_cost) %></span>
+    </div>
+    <div class="duplicate-cost">
+      <span class="label duplicate-cost-label yellow" id="stop-5">Dupe Cost</span><span><%= number_to_currency(product.duplicate_cost) %></span>
     </div>
     </div>
 
@@ -45,19 +48,22 @@
   
 <ol class="joyride-list" data-joyride>
   <li data-id="stop-1" data-text="Next" data-options="tip_location: top; prev_button: false">
-    <p><h4>Hello!</h4> Welcome to the <strong>Coloredge Composer</strong>'s Product list.</p>
+    <p><h4>Hello!</h4> Welcome to the <strong>Coloredge Composer</strong> Product Index.</p>
   </li>
   <li data-id="stop-2" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left">
-    <p> <h4>Product Image</h4> The Product list shows on image of each product.</p>
+    <p> <h4>Product Image</h4> The Product index shows an image of each product.</p>
   </li>
   <li data-id="stop-3" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: right;tipAdjustmentY:-22px;tipAdjustmentX:14px">
-    <p> <h4>Product Name</h4> Here is the Product name.</p>
+    <p> <h4>Product Name</h4> Here is the Product's name.</p>
   </li>
-  <li data-id="stop-4" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: right;tipAdjustmentY:-22px;tipAdjustmentX:14px">
-    <p> <h4>Base Cost</h4> And here is the Product's base cost.</p>
+  <li data-id="stop-4" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left;tipAdjustmentY:-22px;tipAdjustmentX:-5px">
+    <p> <h4>Original Cost</h4> This is the cost for the first Comp.</p>
+  </li>
+  <li data-id="stop-5" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev" data-options="tip_location: left;tipAdjustmentY:-22px;tipAdjustmentX:-5px">
+    <p> <h4>Duplicate Cost</h4> And here is the cost additional Comps.</p>
   </li>
   <li data-button="End" data-prev-text="Prev">
-    <p><h4>Estimation</h4>Click into a Product to estimate prices.</p>
+    <p><h4>Estimation</h4>Click into a Product's image to estimate its prices.</p>
   </li>
 </ol>
 

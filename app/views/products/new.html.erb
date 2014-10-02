@@ -1,13 +1,7 @@
-<h1>New Product</h1>
+<h1 class="small-12 medium-8 text-center large-6 small-centered columns ">New Product</h1>
 
-<%= form_for @product, :html => {:multipart => true} do |f| %>
-    <%= f.text_field :name %>
+<div class="small-12 small-centered text-center edit-image">
+  <%= image_tag @product.image_url(:thumb) %>
+</div>
 
-    <%= f.text_field :base_cost, data: {autonumeric: {aSign: '$ ', mDec: 2}, placeholder: "Base price..."}  %>
-
-    <%= f.text_field  :duplicate_cost, data: {autonumeric: {aSign: '$ ', mDec: 2}, placeholder: "Base price..."}  %>
-
-    <%= f.file_field :image  %>
-
-    <%= f.submit  %>
-<% end %>
+<%= render 'form' %>
