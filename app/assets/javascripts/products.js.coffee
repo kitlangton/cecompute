@@ -21,6 +21,9 @@ $(document).ready ->
     $(this).closest(".item").find(".product-name a").animate
       color: "black", 200
 
+$(document).ready ->
+  $(".product-name").dotdotdot()
+  
 $ ->
   $('#sort-by-price').click ->
     $("#container").isotope({ sortBy : 'price'})

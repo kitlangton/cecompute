@@ -30,6 +30,11 @@
   height: 100%
 }
 
+.product-name {
+  height: 3em; // that's one line, 2em for 2 lines, etc...
+ text-align: center;
+}
+
 #quantity {
   font-size: 1.4em;
   height: 50px;

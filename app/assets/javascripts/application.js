@@ -27,6 +27,7 @@
 //= require spin
 //= require jquery.spin
 //= require isotope.pkgd.min
+//= require jquery.dotdotdot.min.js
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
