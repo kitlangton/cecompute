@@ -19,13 +19,13 @@
 
     <div class="product-link">
 
-      <%= link_to product do  %>
+      <%= link_to product, title: product.name, rel: "tooltip" do  %>
         <div  class="product-image th">
         <%= image_tag product.image_url(:thumb), id:"stop-2"  %>
       </div>
 
       <div class="product-name">
-        <strong  id="stop-3" ><span class="has-tip" data-tooltip aria-haspopup="true" title="<%= product.name  %>"><%= product.name  %></span></strong>
+        <strong  id="stop-3" ><span></span><%= product.name  %></strong>
       <% end %>
       </div>
     </div>
