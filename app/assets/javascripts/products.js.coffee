@@ -15,10 +15,10 @@ $(document).ready ->
   $("#joy-start").click ->
     $(document).foundation 'joyride', 'start'
   $(".product-link").hover (->
-    $(this).closest(".item").find(".product-name a").animate
+    $(this).closest(".item").find(".product-name a").stop(true).animate
       color: "rgb(247,143,30)", 200
   ), ->
-    $(this).closest(".item").find(".product-name a").animate
+    $(this).closest(".item").find(".product-name a").stop(true).animate
       color: "black", 200
 
 $(document).ready ->

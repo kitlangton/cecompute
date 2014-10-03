@@ -33,35 +33,6 @@ window.hi = ->
     $total.text format2((base_cost + (dupe_cost * (quantity - 1))), "$")
     @last_quantity = quantity
 
-
-    if $(this).hasClass "dormant"
-      $(this).addClass "active"
-      # $(this).toggleClass('active', 150).toggleClass('dormant', 150);
-      $(this).removeClass "dormant"
-      current_total = $("#totalprice").data('total')
-      $("#totalprice").data 'total', parseInt( price * 100 + current_total )
-      current_total = $("#totalprice").data('total')
-      $("#totalprice").text "" + format2(current_total / 100, "$")
-      $(this).addClass 'new-price-plus'
-      $(this).removeClass 'new-price-plus', 300
-      $(this).find('.select-val').val "selected"
-      if current_total > 0
-        $('#totalprice').addClass "green"
-
-      return
-    if $(this).hasClass "active"
-      $(this).addClass "dormant"
-      $(this).removeClass "active"
-      current_total = $("#totalprice").data('total')
-      $("#totalprice").data 'total', parseInt( current_total - price * 100 )
-      current_total = $("#totalprice").data('total')
-      $("#totalprice").text "" + format2(current_total / 100, "$")
-      $("#total").addClass 'new-price-minus'
-      $("#total").removeClass 'new-price-minus', 300
-      $(this).addClass 'new-price-minus'
-      $(this).removeClass 'new-price-minus', 300
-      $(this).find('.select-val').val "1"
-
 $ ->
   window.hi()
   $('.select-val').val "1"
