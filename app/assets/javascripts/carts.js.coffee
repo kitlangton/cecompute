@@ -3,5 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
 $ ->
-  # $(".cart-name").dotdotdot
-  #   watch: "window"
+  $('.best_in_place').best_in_place()
+  $('.best_in_place').on "blur", "form", (e) ->
+    id = $(this).closest(".best_in_place").data 'url'
+    id = id.match(/(\d+)/)[0]
+    alert id

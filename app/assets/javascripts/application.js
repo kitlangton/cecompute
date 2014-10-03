@@ -25,6 +25,8 @@
 //= require masonry/modernizr-transitions
 //= require foundation
 //= require spin
+//= require jquery.purr
+//= require best_in_place
 //= require jquery.spin
 //= require isotope.pkgd.min
 //= require jquery.dotdotdot.min.js

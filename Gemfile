@@ -24,6 +24,7 @@ gem 'rmagick', :require => 'RMagick'
 gem 'masonry-rails'
 gem 'spinjs-rails'
 gem "fog"
+gem 'best_in_place', :git => 'https://github.com/aaronchi/best_in_place.git'
 
 
 group :development, :test do

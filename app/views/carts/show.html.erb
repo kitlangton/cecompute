@@ -31,7 +31,7 @@
         <%= number_to_currency(product.duplicate_cost)  %>
         </div>
     </div>
-      <div class="text-center small-2 large-1 columns cart-text quantity"><h3><span class="mult-x">X</span></span><%= line_item.quantity  %></h3></div>
+    <div class="text-center small-2 large-1 columns cart-text quantity"><h3><span class="mult-x">X</span></span><%= best_in_place line_item, :quantity, :classes =>  "inline-form"  %></h3></div>
       <div class="text-center small-2 columns cart-text subtotal-text"><strong><%= number_to_currency(line_item.subtotal)  %></strong></div>
     </div>
     <span class="controls">

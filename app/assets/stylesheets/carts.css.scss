@@ -43,6 +43,30 @@ box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
   min-width: 50px;
 }
 
+.inline-form > form {
+    font-size: 30px;
+    outline-color: transparent;
+    outline-style: none;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+}
+
+.purr {
+  position: fixed;
+  top: 30px;
+  right: 100px;
+  width: 250px;
+  padding: 20px;
+  background-color: #FCC;
+  border: solid 2px #C66;
+  &:first-letter { text-transform: uppercase; }
+}
+
 .cart-name{
   position: relative;
   top: 37px;
