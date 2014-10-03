@@ -44,6 +44,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @cart = current_user.cart || Cart.create!(user_id:current_user.id)
   end
 
   private

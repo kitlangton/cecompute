@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   resources :services
   resources :orders
   resources :products
-
+  resources :line_items
   root 'products#index'
 
   scope "/admin" do
     resources :users
   end
-
+  resources :carts
   namespace :user do
     get :orders
   end

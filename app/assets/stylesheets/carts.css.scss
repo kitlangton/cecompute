@@ -1,0 +1,96 @@
+// Place all the styles related to the Carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.title-row div {
+  margin-bottom: 10px;
+  font-style: bold;
+}
+
+.cart-insides {
+    margin-bottom: 15px;
+  }
+
+.cart-text {
+   line-height: 100px;
+   height: 100px;   
+}
+.cart-label {
+  bottom: 10px;
+}
+
+.cart-row {
+-webkit-box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
+-moz-box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
+box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
+  // border: 1px lightgrey solid;
+}
+.cart-image {
+  margin: 10px 0;
+}
+
+.imagine {
+  width: 100px;
+}
+
+.controls {
+  position: relative;
+  right: -50px;
+  top: -50px;
+}
+
+.cart-image img {
+  width: 100px;
+  min-width: 50px;
+}
+
+.cart-name{
+  position: relative;
+  top: 37px;
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  text-align: left;
+  font-style: bold;
+}
+
+.remove-button {
+  position: relative;
+  bottom: 40px;
+  left: 35px;
+}
+
+.subtotal-text {
+  font-size: 1.2em;
+}
+
+.quantity {
+  text-align: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-style: bolder;
+  position: relative;
+  top: 17px;
+  left: 12px;
+  border: 1px lightgrey solid;
+  h3 {
+  position: relative;
+  top: 14px;
+  }
+  .mult-x {
+    position: relative;
+    bottom: 4px;
+    right: 3px;
+    font-size: .5em;
+    font-style: bolder;
+  }
+  background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+}

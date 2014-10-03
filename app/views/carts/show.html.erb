@@ -1,0 +1,47 @@
+<h1 class="small-12 medium-8 large-5 small-centered columns text-center">Cart</h1>
+
+<hr />
+<div class="small-12 columns small-centered">
+  
+<div class="cart-container row" >
+    <div class="row title-row">
+      <div class="cart-image text-center small-1 columns"><strong>Image</strong></div>
+      <div class="cart-image text-center small-5 medium-6 large-4 columns"><strong>Name</strong></div>
+      <div class="cart-image text-center small-2 large-2 columns"><strong>Orig. Cost</strong></div>
+      <div class="cart-image text-center small-2 large-1 columns"><strong>Quantity</strong></div>
+      <div class="cart-image text-center small-2 columns"><strong>Subtotal</strong></div>
+    </div>
+<% @cart.line_items.each do |line_item| %>
+<% product = Product.find(line_item.product_id.to_i)  %>
+  <div class="cart-insides ">
+    <div class="row cart-row small-centered inner-wrap">
+      <div class="cart-image small-1 columns "> <%= image_tag product.image_url(:thumb), class: "th"%></div>
+      <div class="cart-name small-5 medium-6  large-4 columns"><%= link_to product do %><%= product.name  %><% end %></div>
+      <div class="text-center small-2 large-2 columns ">
+        <div class="label show-label base-cost-label  ">
+          Orig. Cost
+        </div>
+        <div class="text-center">
+        <%= number_to_currency(product.base_cost)  %>
+        </div>
+        <div class="label show-label duplicate-cost-label yellow">
+          Dupe. Cost
+        </div >
+        <div class="text-center">
+        <%= number_to_currency(product.duplicate_cost)  %>
+        </div>
+    </div>
+      <div class="text-center small-2 large-1 columns cart-text quantity"><h3><span class="mult-x">X</span></span><%= line_item.quantity  %></h3></div>
+      <div class="text-center small-2 columns cart-text subtotal-text"><strong><%= number_to_currency(line_item.subtotal)  %></strong></div>
+    </div>
+    <span class="controls">
+      <%= link_to line_item_path(line_item), method: :delete do  %>
+      <span class="remove-button">Remove</a>
+      <% end %>
+    </span>
+  </div>
+<% end %>
+</div>
+
+
+</div>
