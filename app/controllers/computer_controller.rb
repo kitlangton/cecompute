@@ -3,7 +3,6 @@ class ComputerController < ApplicationController
   respond_to :html, :js
 
   def index
-    @cart = current_user.cart || Cart.create(user_id: current_user.id)
     @services = Service.all
     @order = Order.new
   end
