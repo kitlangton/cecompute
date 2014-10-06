@@ -3,9 +3,9 @@
 <%= form_for @product, :html => {:multipart => true} do |f| %>
     <%= f.text_field :name %>
 
-    <%= f.text_field :base_cost, data: {autonumeric: {aSign: '$ ', mDec: 2}, placeholder: "Base price..."}  %>
+    <%= f.text_field :base_cost, label: "Original Cost", data: {autonumeric: {aSign: '$ ', mDec: 2}, placeholder: "Base price..."}  %>
 
-    <%= f.text_field  :duplicate_cost, data: {autonumeric: {aSign: '$ ', mDec: 2}, placeholder: "Base price..."}  %>
+    <%= f.text_field  :duplicate_cost, label: "Duplicate Cost", data: {autonumeric: {aSign: '$ ', mDec: 2}, placeholder: "Base price..."}  %>
 
     <%= f.file_field :image, class: "button text-center", id: "upload-button" %>
     <div class="text-center button image-upload-replace">

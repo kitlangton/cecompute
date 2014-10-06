@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :products
   resources :line_items
   root 'products#index'
+  get 'cart/total', to: 'carts#total'
 
   scope "/admin" do
     resources :users

@@ -10,7 +10,17 @@ class LineItemsController < ApplicationController
   def update
     @line_item = LineItem.find(params[:id])
     @line_item.update(line_item_params)
-    respond_with @line_item
+    respond_to do |format|
+      format.html
+      format.json { render :json => { :line_item => @line_item, :subtotal => @line_item.subtotal } }
+    end
+  end
+
+  def show
+    @line_item = LineItem.find(params[:id])
+    respond_to do |format|
+      format.json { render :json => { :subtotal => @line_item.subtotal_as_currency } }
+    end
   end
 
   private 

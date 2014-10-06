@@ -43,8 +43,26 @@ box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
   min-width: 50px;
 }
 
-.inline-form > form {
+.total-text {
+  font-size: 1.5em;
+  font-style: bolder;
+}
+
+.cart-row {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+
+
+.cart-row {
+  input:focus {
+    // position: relative;
+    // bottom: 40px;
+    // left: 0px;
+    width: 80px;
     font-size: 30px;
+    background: transparent;
     outline-color: transparent;
     outline-style: none;
     border: none;
@@ -53,7 +71,7 @@ box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-
+  }
 }
 
 .purr {
@@ -87,8 +105,31 @@ box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
 .subtotal-text {
   font-size: 1.2em;
 }
+@-webkit-keyframes spaceboots {
+	0% { color: black; }
+	50% { color: orange; }
+	100% { color: black; }
+}
+
+.add-to-cart-button {
+  margin-top: 15px;
+}
 
 .quantity {
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  &:hover {
+    h3 {
+      -webkit-animation-name: spaceboots;
+      -webkit-animation-duration: 0.8s;
+      -webkit-transform-origin:50% 50%;
+      -webkit-animation-iteration-count: once;
+      -webkit-animation-timing-function: linear;
+      top: 10px;
+      font-size: 1.9em;
+    }
+    cursor: pointer;
+  }
   text-align: center;
   border-radius: 50%;
   width: 70px;
@@ -99,15 +140,11 @@ box-shadow: 6px 6px 14px 1px rgba(0,0,0,0.26);
   left: 12px;
   border: 1px lightgrey solid;
   h3 {
+  transition: all .2s;
+  -webkit-transition: all .2s;
   position: relative;
   top: 14px;
-  }
-  .mult-x {
-    position: relative;
-    bottom: 4px;
-    right: 3px;
-    font-size: .5em;
-    font-style: bolder;
+  text-align: center;
   }
   background: rgba(255,255,255,1);
 background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
