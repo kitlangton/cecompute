@@ -27,6 +27,3 @@ $ ->
       $('.total-text').addClass 'new-price-plus'
       $('.total-text').removeClass 'new-price-plus', 200
     return
-
-$ ->
-
