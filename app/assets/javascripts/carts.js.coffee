@@ -4,13 +4,15 @@
 #
 $ ->
   $('.best_in_place').best_in_place()
-  $('.best_in_place').on "blur", "form", (e) ->
-    id = $(this).closest(".best_in_place").data 'url'
-    id = id.match(/(\d+)/)[0]
 
 $ ->
   $(".remove-button").on "click", ->
     $(@).closest(".cart-insides").fadeOut()
+  $(".best_in_place"). on "keyup", ->
+    input = $(this).find("input").val()
+    if input < 1 and input != ""
+      $(this).find("input").val 1
+
   $("a[data-remote]").on "ajax:success", (e, data, status, xhr) ->
     $.get '/cart/total', (data) ->
       $('.total-text').text data['total']
