@@ -15,7 +15,7 @@ class Cart < ActiveRecord::Base
 
   def to_csv
     CSV.generate do |csv|
-      csv << ["Product Name", "Original Cost", "Duplicate Cost" "Quantity", "Subtotal"]
+      csv << ["Product Name", "Original Cost", "Duplicate Cost", "Quantity", "Subtotal"]
       line_items.each do |line_item|
         csv << [line_item.product.name, number_to_currency(line_item.product.base_cost), number_to_currency(line_item.product.duplicate_cost), line_item.quantity, number_to_currency(line_item.subtotal)]
       end
