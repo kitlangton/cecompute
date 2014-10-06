@@ -19,7 +19,7 @@
             <a id="joy-start">Guide</a>
           </li>
           <li >
-            <%= link_to "My Orders", user_orders_path  %>
+            <%= link_to "My Cart - #{pluralize(current_user.cart.line_items.length, 'item')}", current_user.cart  %>
           </li>
           <li>
             <%= link_to 'Edit profile', edit_user_registration_path %> 
