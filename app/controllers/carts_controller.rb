@@ -14,7 +14,7 @@ class CartsController < ApplicationController
   end
 
   def show
-    @cart = current_user.cart
+    @cart = current_user.cart || Cart.create(user_id: current_user.id)
     respond_to do |format|
       format.html
       format.csv { send_data @cart.to_csv, :filename => 'cart_data.csv' }
