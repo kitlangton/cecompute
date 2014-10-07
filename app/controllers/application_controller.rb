@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def set_cart!
     unless current_user.cart
-      Cart.new(user_id: current_user.id)
+      Cart.create(user_id: current_user.id)
     end
   end
 
