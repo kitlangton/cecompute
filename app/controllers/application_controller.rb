@@ -5,12 +5,16 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  # def authenticate_user!
-  #   if user_signed_in?
-  #     super
-  #   else
-  #     redirect_to new_user_session_path
-  #   end
-  # end
+  def require_sign_in!
+    unless current_user
+      redirect_to new_user_session_path
+    end
+  end
+
+  def set_cart!
+    unless current_user.cart
+      Cart.new(user_id: current_user.id)
+    end
+  end
 
 end

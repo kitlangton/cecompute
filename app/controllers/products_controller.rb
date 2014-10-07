@@ -1,10 +1,9 @@
 class ProductsController < ApplicationController
   respond_to :html, :js
+  before_action :require_sign_in!
+  before_action :set_cart!
 
   def index
-    if current_user
-      @cart = current_user.cart || Cart.create(user_id: current_user.id)
-    end
     @products = Product.all
   end
 

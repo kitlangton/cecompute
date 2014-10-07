@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  before_action :require_sign_in!
+  before_action :set_cart!
 
   def total
     @cart = current_user.cart
