@@ -32,14 +32,14 @@
         <%= number_to_currency(product.duplicate_cost)  %>
         </div>
     </div>
+    <span class="controls">
+      <%= link_to line_item_path(line_item), method: :delete, remote: true do  %>
+      <span class="fa fa-remove fa-2x remove-button"></a>
+      <% end %>
+    </span>
     <div class="text-center small-2 large-1 columns cart-text quantity"><h3></span><%= best_in_place line_item, :quantity, class: "inline-form"  %></h3></div>
       <div class="text-center small-2 columns cart-text"><strong class="subtotal-text"><%= number_to_currency(line_item.subtotal) %></strong></div>
     </div>
-    <span class="controls">
-      <%= link_to line_item_path(line_item), method: :delete, remote: true do  %>
-      <span class="remove-button">Remove</a>
-      <% end %>
-    </span>
   </div>
 <% end %>
   <div class="cart-insides ">
