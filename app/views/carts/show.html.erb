@@ -55,7 +55,8 @@
 </div>
 
 <div class="button-group small-12 small-centered columns text-center">
-<%= link_to "Download CSV", cart_path(format:"csv"), class: "button tiny" %>
+<%# <%= link_to "Download CSV", cart_path(format:"csv"), class: "button tiny" %>
+<%= link_to "Download Quote (PDF)", cart_path(@cart, format:"pdf"), class: "button tiny" %>
 </div>
 
 <% else %>

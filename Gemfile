@@ -26,6 +26,10 @@ gem 'spinjs-rails'
 gem "fog"
 gem 'best_in_place', :git => 'https://github.com/aaronchi/best_in_place.git'
 
+# PDF
+gem 'prawn'
+gem 'prawn-table'
+
 
 group :development, :test do
   gem 'sqlite3'
